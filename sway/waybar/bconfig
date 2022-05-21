@@ -7,7 +7,8 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode", "custom/media"],
     "modules-center": ["sway/window"],
-    "modules-right": ["custom/currencies", "custom/tink", "pulseaudio", "network", "custom/fan", "cpu", "memory", "temperature", "keyboard-state", "sway/language", "battery", "battery#bat2", "clock", "tray"], // Modules configuration
+    // "custom/tink"
+    "modules-right": ["mpd", "idle_inhibitor", "pulseaudio", "network", "custom/fan", "cpu", "memory", "temperature", "backlight", "keyboard-state", "sway/language", "battery", "battery#bat2", "clock", "tray"], // Modules configuration
     // "sway/workspaces": {
     //     "disable-scroll": true,
     //     "all-outputs": true,
@@ -171,12 +172,6 @@
         "escape": true,
         "exec": "python $HOME/.config/waybar/fan.py 2> /dev/null",
         "interval": 5
-    },
-    "custom/currencies": {
-        "return-type": "json",
-        "format": "  {}",
-        "escape": true,
-        "exec": "python $HOME/.config/waybar/usd_tink.py 2> /dev/null" 
-    },
+    }
 }
 

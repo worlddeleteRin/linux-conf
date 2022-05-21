@@ -8,13 +8,13 @@
 font pango: SourceCodePro Medium 12
 
 ### Exec apps
-exec mako
+exec dunst
 
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
-# Use Mod1 for Command/Win
-set $mod Mod1
+# Use Mod4 for Command/Win
+set $mod Mod4
 # Home row direction keys, like vim
 set $left h
 set $down j
@@ -25,7 +25,8 @@ set $term alacritty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu wofi --show run
+# set $menu wofi --show run
+set $menu bemenu-run -c -H 30
 # set $menu menu_path | dmenu | xargs swaymsg exec --
 
 ### Output configuration
@@ -81,7 +82,7 @@ input "type:keyboard" {
   xkb_layout us,ru
   repeat_delay 120
   repeat_rate 70
-  xkb_options grp:win_space_toggle,caps:swapescape
+  xkb_options grp:alt_space_toggle,caps:swapescape
 }
 
 ### Audio bindings
@@ -92,6 +93,7 @@ bindsym --locked XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ to
 
 # Custom bindsym
     bindsym $mod+Insert exec grim -g "$(slurp)" - | wl-copy
+    bindsym $mod+Shift+Insert exec wf-recorder -g "$(slurp)"
 # Basics:
 #
     # Start a terminal

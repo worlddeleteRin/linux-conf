@@ -1,7 +1,7 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 window#waybar {
@@ -83,6 +83,7 @@ window#waybar.chromium {
 #custom-weather,
 #custom-tink,
 #custom-fan,
+#custom-currencies,
 #mpd {
     margin: 3px 0px;
     padding: 0 10px;
@@ -97,6 +98,10 @@ window#waybar.chromium {
 
 #custom-weather {
   background-color: #26A65B;
+}
+
+#custom-currencies {
+  background-color: grey;
 }
 
 #custom-tink {
